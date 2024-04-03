@@ -1,0 +1,108 @@
+@import 'node_modules/normalize.css/normalize.css';
+:root {
+  --main-color: #e9262d;
+  --secondary-color: #73be43;
+  --background-color: #ffffff;
+  --border-color: #eeeeee;
+  --element-color: #1c1a1a26;
+  --element-border-color: #00000033;
+  --warning-color: #ffefe0;
+  --text-color: #000000;
+  --light-text-color: #69696C;
+  --text-size: 14px;
+  --text-size-medium: 16px;
+  --text-size-big: 18px;
+  --standart-font-weight: 400;
+  --bold-font-weight: 700;
+}
+
+* {
+  font-family: "Golos Text", Arial, Helvetica, sans-serif;
+  font-size: var(--text-size);
+  color: var(--text-color);
+  font-weight: var(--standart-font-weight);
+}
+
+.decoration-line__lines-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.decoration-line__top-border {
+  height: 1px;
+}
+.decoration-line__progress-bar {
+  height: 4px;
+}
+.decoration-line__line-container {
+  width: 50%;
+}
+.decoration-line__line {
+  width: 100%;
+  height: 100%;
+}
+.decoration-line__line--left {
+  background-color: var(--main-color);
+}
+.decoration-line__line--right {
+  background-color: var(--secondary-color);
+}
+.decoration-line__progress-line--left {
+  width: 80%;
+}
+.decoration-line__progress-line--right {
+  width: 0%;
+}
+
+.header {
+  width: 100%;
+}
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 28px;
+     -moz-column-gap: 28px;
+          column-gap: 28px;
+  padding: 15px 30px 17px 30px;
+}
+.header__menu-button {
+  width: 32px;
+  height: 32px;
+  background-image: url("/source/svg/menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.header__menu-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.header__label {
+  font-size: var(--text-size);
+  line-height: 20px;
+  font-weight: var(--standart-font-weight);
+}
+
+.main__bottom-decoration-line-container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.main__bottom-decoration-lines {
+  height: 5px;
+}

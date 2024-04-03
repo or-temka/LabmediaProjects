@@ -1,0 +1,6 @@
+* {
+  @include general-font-family;
+  font-size: var(--text-size);
+  color: var(--text-color);
+  font-weight: var(--standart-font-weight);
+}

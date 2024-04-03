@@ -1,0 +1,11 @@
+.main {
+  &__bottom-decoration-line-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+  &__bottom-decoration-lines {
+    height: 5px;
+  }
+}

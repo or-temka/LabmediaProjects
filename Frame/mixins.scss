@@ -1,0 +1,44 @@
+// font-family
+@mixin general-font-family() {
+  font-family: 'Golos Text', Arial, Helvetica, sans-serif;
+}
+@mixin second-font-family() {
+  font-family: 'Navigo', Arial, Helvetica, sans-serif;
+}
+
+//text
+@mixin h1() {
+  font-size: 38px;
+  line-height: 50px;
+  font-weight: var(--bold-font-weight);
+}
+@mixin h2() {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: var(--bold-font-weight);
+}
+@mixin h4() {
+  font-size: var(--text-size-big);
+  line-height: 26px;
+  font-weight: var(--bold-font-weight);
+}
+@mixin h5() {
+  font-size: var(--text-size-medium);
+  line-height: 24px;
+  font-weight: var(--bold-font-weight);
+}
+@mixin b2() {
+  font-size: var(--text-size-big);
+  line-height: 26px;
+  font-weight: var(--standart-font-weight);
+}
+@mixin b3() {
+  font-size: var(--text-size-medium);
+  line-height: 24px;
+  font-weight: var(--standart-font-weight);
+}
+@mixin b4() {
+  font-size: var(--text-size);
+  line-height: 20px;
+  font-weight: var(--standart-font-weight);
+}
