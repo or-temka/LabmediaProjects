@@ -1,0 +1,19 @@
+.main {
+
+  display: flex;
+  flex-direction: column;
+
+  &__tabs {
+    margin: 30px;
+  }
+
+  // Bottom lines
+  &__bottom-decoration-line-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  &__bottom-decoration-lines {
+    height: 5px;
+  }
+}

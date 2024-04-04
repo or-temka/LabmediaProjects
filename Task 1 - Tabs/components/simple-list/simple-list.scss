@@ -1,0 +1,57 @@
+.simple-list {
+
+  
+
+  &__item {
+    @include b5;
+    @include second-font-family;
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__ol {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    
+    list-style-type: none;
+    counter-reset: my-counter;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__ol-item {
+    counter-increment: my-counter;
+
+    &::before {
+      content: counter(my-counter);
+      @include shy-font-family;
+      font-weight: var(--standart-font-weight);
+      color: var(--main-color);
+      display: inline-block;
+      width: 20px;
+    }
+  }
+
+  &__ul {
+    flex-direction: column;
+    row-gap: 8px;
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 9px;
+    display: flex;
+  }
+
+  &__ul-item {
+    margin-left: 2px;
+    &::before {
+      content: '-';
+      @include shy-font-family;
+      color: var(--secondary-color);
+      display: inline-block;
+      width: 20px;
+    }
+  }
+}

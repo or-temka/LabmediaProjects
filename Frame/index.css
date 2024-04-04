@@ -23,6 +23,58 @@
   font-weight: var(--standart-font-weight);
 }
 
+.h1 {
+  font-size: 38px;
+  line-height: 50px;
+  font-weight: var(--bold-font-weight);
+  margin: 0;
+}
+
+.h2 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: var(--bold-font-weight);
+  margin: 0;
+}
+
+.h4 {
+  font-size: var(--text-size-big);
+  line-height: 26px;
+  font-weight: var(--bold-font-weight);
+  margin: 0;
+}
+
+.h5 {
+  font-size: var(--text-size-medium);
+  line-height: 24px;
+  font-weight: var(--bold-font-weight);
+  margin: 0;
+}
+
+.b2 {
+  font-size: var(--text-size-big);
+  line-height: 26px;
+  font-weight: var(--standart-font-weight);
+}
+
+.b3 {
+  font-size: var(--text-size-medium);
+  line-height: 24px;
+  font-weight: var(--standart-font-weight);
+}
+
+.b4 {
+  font-size: var(--text-size);
+  line-height: 20px;
+  font-weight: var(--standart-font-weight);
+}
+
+.b5 {
+  font-size: var(--text-size);
+  line-height: 21px;
+  font-weight: var(--standart-font-weight);
+}
+
 .decoration-line__lines-container {
   width: 100%;
   display: -webkit-box;
@@ -35,9 +87,6 @@
 }
 .decoration-line__top-border {
   height: 1px;
-}
-.decoration-line__progress-bar {
-  height: 4px;
 }
 .decoration-line__line-container {
   width: 50%;
@@ -52,11 +101,21 @@
 .decoration-line__line--right {
   background-color: var(--secondary-color);
 }
-.decoration-line__progress-line--left {
-  width: 80%;
-}
-.decoration-line__progress-line--right {
+.decoration-line__progress-bar {
+  height: 4px;
+  position: relative;
   width: 0%;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.decoration-line__progress-container {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header {
@@ -98,6 +157,15 @@
   font-weight: var(--standart-font-weight);
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .main__bottom-decoration-line-container {
   position: fixed;
   width: 100%;

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="source/fonts/Golos/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="source/fonts/Navigo/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="source/fonts/Century Gothic/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Task</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__menu-button"></div>
+        <span class="header__label">Текст</span>
+      </div>
+      <div class="decoration-line">
+        <div
+          class="decoration-line__top-border decoration-line__lines-container"
+        >
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--left"
+            ></div>
+          </div>
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="decoration-line">
+        <div id="progress-line" class="decoration-line__progress-bar decoration-line__lines-container">
+          <div class="decoration-line__progress-container" >
+            <div
+                class="decoration-line__progress-line decoration-line__progress-line--left decoration-line__line decoration-line__line--left"
+              ></div>
+              <div
+              class="decoration-line__progress-line decoration-line__progress-line--right decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <section class="tabs main__tabs">
+        <h2 class="tabs__label h2">Табы</h2>
+        <div class="tabs__container">
+          <nav id="tab-buttons" class="tabs__buttons">
+            <button class="tabs__button" data-tab-button="1">Таб 1</button>
+            <button class="tabs__button" data-tab-button="2">Таб 2</button>
+            <button class="tabs__button" data-tab-button="3">Таб 3</button>
+            <button class="tabs__button" data-tab-button="4">Таб 4</button>
+          </nav>
+          <section class="tabs__content">
+            <ol id="tab-items" class="simple-list simple-list__ol">
+              <li data-tab-item="1" class="simple-list__item simple-list__ol-item simple-list__item--bold">
+                Заголовок нумерованного списка
+                <ul class="simple-list__ul">
+                  <li class="simple-list__item simple-list__ul-item">Элемент 1</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 2</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 3</li>
+                </ul>
+              </li>
+              <li data-tab-item="2" class="simple-list__item simple-list__ol-item simple-list__item--bold">
+                Заголовок нумерованного списка
+                <ul class="simple-list__ul">
+                  <li class="simple-list__item simple-list__ul-item">Элемент 1</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 2</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 3</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 4</li>
+                </ul>
+              </li>
+              <li data-tab-item="3" class="simple-list__item simple-list__ol-item simple-list__item--bold">
+                Заголовок нумерованного списка
+                <ul class="simple-list__ul">
+                  <li class="simple-list__item simple-list__ul-item">Элемент 1</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 2</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 3</li>
+                </ul>
+              </li>
+              <li data-tab-item="4" class="simple-list__item simple-list__ol-item simple-list__item--bold">
+                Заголовок нумерованного списка
+                <ul class="simple-list__ul">
+                  <li class="simple-list__item simple-list__ul-item">Элемент 1</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 2</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 3</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 4</li>
+                  <li class="simple-list__item simple-list__ul-item">Элемент 5</li>
+                </ul>
+              </li>
+            </щl>
+          </section>
+        </div>
+        <button id="next-btn" class="button button--disabled button--next-step tabs__next-btn">Продолжить</button>
+      </section>
+      <div class="decoration-line main__bottom-decoration-line-container">
+        <div
+          class="decoration-line__top-border decoration-line__lines-container main__bottom-decoration-lines"
+        >
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--left"
+            ></div>
+          </div>
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="main.js" type="module"></script>
+</html>
