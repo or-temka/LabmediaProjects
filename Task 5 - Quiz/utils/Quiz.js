@@ -60,6 +60,10 @@ export default class Quiz {
         randomQuestionsOrder: false,
         randomAnswersOrder: false,
       },
+      handlers: {
+        questionEndHandler: () => {},
+        testEndHandler: () => {},
+      },
     }
 
     const options = {
@@ -95,6 +99,14 @@ export default class Quiz {
           initialOptions?.params?.randomAnswersOrder ??
           defaultOptions.params.randomAnswersOrder,
       },
+      handlers: {
+        questionEndHandler:
+          initialOptions?.handlers?.questionEndHandler ??
+          defaultOptions.handlers.questionEndHandler,
+        testEndHandler:
+          initialOptions?.handlers?.testEndHandler ??
+          defaultOptions.handlers.testEndHandler,
+      },
     }
 
     // sets
@@ -113,6 +125,8 @@ export default class Quiz {
       '#' + components.result.usernameHolderId
     ).textContent = options.params.username
 
+    this._questionEndHandler = options.handlers.questionEndHandler
+    this._testEndHandler = options.handlers.testEndHandler
     this._randomQuestionsOrder = options.params.randomQuestionsOrder
     this._randomAnswersOrder = options.params.randomAnswersOrder
     this._questions = options.questions
@@ -202,10 +216,10 @@ export default class Quiz {
     // initial launches
     this._setEvents()
 
-    if (this._randomQuestionsOrder){
+    if (this._randomQuestionsOrder) {
       this.randomizeQuestions()
     }
-    if (this._randomAnswersOrder){
+    if (this._randomAnswersOrder) {
       this.randomizeAnswers()
     }
 
@@ -310,6 +324,8 @@ export default class Quiz {
     this._closeLabel()
     this._closeWindow(questionDOM.questionContainer)
 
+    this._questionEndHandler(this._nowQuestionNum)
+
     // not visible close
     setTimeout(() => {
       if (this._nowQuestionNum >= this._questions.length) {
@@ -365,6 +381,8 @@ export default class Quiz {
       resultDOM.repeatTestBtn.style.display = 'flex'
     }
 
+    this._testEndHandler()
+
     // visible
     this._openLabel()
     this._openWindow(resultDOM.resultContainer)
@@ -376,10 +394,10 @@ export default class Quiz {
     this._closeLabel()
     this._closeWindow(this._DOM.result.resultContainer)
 
-    if (this._randomQuestionsOrder){
+    if (this._randomQuestionsOrder) {
       this.randomizeQuestions()
     }
-    if (this._randomAnswersOrder){
+    if (this._randomAnswersOrder) {
       this.randomizeAnswers()
     }
 
