@@ -1,0 +1,119 @@
+.slider {
+  padding: 30px;
+  padding-bottom: 21px;
+  max-width: 940px;
+  margin: 0 auto;
+
+  // slides
+  &__slides {
+    border-radius: 15px 15px 0 0;
+    border: 1px solid var(--darken-border-color);
+    overflow: hidden;
+    position: relative;
+    height: 336px;
+  }
+
+  &__slides-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -0%;
+    transition: 0.5s;
+  }
+
+  &__slide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // nav-menu
+  &__nav-menu {
+    background-color: var(--main-color);
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+  }
+
+  &__change-slide-btn {
+    width: 100%;
+    height: 100%;
+    max-width: 340px;
+    background-image: url('source/svg/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--background-color);
+      transition: 0.1s opacity;
+      position: absolute;
+    }
+
+    &--prev-slide {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__slides-btns {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  &__slides-btn {
+    list-style-type: none;
+    width: 7px + 2px + 2px;
+    height: 7px + 2px + 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--background-color);
+      opacity: 0.25;
+    }
+    &:hover {
+      &::after {
+        opacity: 0.5;
+      }
+    }
+    &--active {
+      &::after {
+        opacity: 1;
+      }
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

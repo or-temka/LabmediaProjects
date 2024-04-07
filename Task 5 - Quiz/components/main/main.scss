@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  margin-bottom: 30px;
+
+  // Bottom lines
+  &__bottom-decoration-line-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  &__bottom-decoration-lines {
+    height: 5px;
+  }
+
+  &__label {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 0px;
+    padding-top: 76px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    padding-bottom: 0;
+  }
+}

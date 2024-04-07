@@ -1,0 +1,69 @@
+.tabs {
+  &__label {
+    @include h4(24px);
+  }
+
+  &__container {
+    margin-top: 34px;
+    margin-bottom: 56px;
+    display: flex;
+    gap: 10px;
+  }
+
+  // nav btns
+  &__buttons {
+    min-width: 232px;
+    display: flex;
+    flex-direction: column;
+    @include small-shadow;
+    height: fit-content;
+  }
+
+  &__button {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    background-color: var(--background-color);
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+    @include b4(14px);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--border-color);
+    }
+
+    &--active {
+      color: var(--main-color);
+      font-weight: var(--bold-font-weight);
+    }
+  }
+
+  //content
+  &__content {
+    @include small-shadow;
+    flex-basis: 100%;
+    padding: 20px 22.5px;
+    padding-bottom: 15px;
+  }
+
+  // other
+  &__next-btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabs {
+    &__container {
+      flex-wrap: wrap;
+    }
+
+    &__buttons {
+      width: 100%;
+    }
+  }
+}

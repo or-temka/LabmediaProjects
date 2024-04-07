@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="source/fonts/Golos/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="source/fonts/Navigo/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="source/fonts/Century Gothic/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Task</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__menu-button"></div>
+        <span class="header__label">Заголовок</span>
+      </div>
+      <div class="decoration-line">
+        <div
+          class="decoration-line__top-border decoration-line__lines-container"
+        >
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--left"
+            ></div>
+          </div>
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="decoration-line">
+        <div
+          id="progress-line"
+          class="decoration-line__progress-bar decoration-line__lines-container"
+        >
+          <div class="decoration-line__progress-container">
+            <div
+              class="decoration-line__progress-line decoration-line__progress-line--left decoration-line__line decoration-line__line--left"
+            ></div>
+            <div
+              class="decoration-line__progress-line decoration-line__progress-line--right decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <span id="loading" style="display: none;" class="b1 loading"></span>
+
+      <h1 id="page-label" class="main__label h1">Тестирование</h1>
+
+      <!-- Quiz-start component -->
+      <section id="quiz-start-container" class="quiz-start">
+        <div class="main__wrapper">
+          <span class="b2 quiz-start__b2"
+            >Осталось пройти небольшой тест, который покажет, как хорошо ты
+            усвоил материал</span
+          >
+          <div class="quiz-start__warning">
+            <ul class="quiz-start__warning-list">
+              <li class="quiz-start__warning-list-item">
+                Для успешного прохождения нужно правильно ответить минимум на 7
+                вопросов из 10
+              </li>
+              <li class="quiz-start__warning-list-item">
+                На прохождение теста дается 3 попытки
+              </li>
+            </ul>
+          </div>
+          <button id="quiz-start-btn" class="quiz-start__start-button">
+            Начать<span class="quiz-start__button-arrow"></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Quiz-question component -->
+      <section id="quiz-question-container" class="quiz-question">
+        <div class="main__wrapper quiz-question__wrapper">
+          <span id="quiz-question" class="b2 quiz-question__b2">Вопрос?</span>
+          <form id="quiz-answers" class="quiz-question__answers">
+            <div class="quiz-question__answer quiz-answer">
+              <input
+                id="radio-answer-1"
+                name="answer"
+                type="radio"
+                class="quiz-question__radio"
+              />
+              <label for="radio-answer-1" class="quiz-question__radio-label"
+                >Ответ 1</label
+              >
+            </div>
+            <div class="quiz-question__answer">
+              <input
+                id="radio-answer-2"
+                name="answer"
+                type="radio"
+                class="quiz-question__radio"
+              />
+              <label for="radio-answer-2" class="quiz-question__radio-label"
+                >Ответ 2</label
+              >
+            </div>
+            <div class="quiz-question__answer">
+              <input
+                id="radio-answer-3"
+                name="answer"
+                type="radio"
+                class="quiz-question__radio"
+              />
+              <label for="radio-answer-3" class="quiz-question__radio-label"
+                >Ответ 3 апва пвап вапвапвапвап пвапвап вапвапавпвап
+                вапвапвапвапв</label
+              >
+            </div>
+            <div class="quiz-question__answer">
+              <input
+                id="radio-answer-4"
+                name="answer"
+                type="radio"
+                class="quiz-question__radio"
+              />
+              <label for="radio-answer-4" class="quiz-question__radio-label"
+                >Ответ 4</label
+              >
+            </div>
+          </form>
+          <button disabled id="entry-answer" class="button button--next-step button--disabled">
+            Принять
+          </button>
+        </div>
+      </section>
+
+      <!-- Quiz-result component -->
+      <section id="quiz-result-container" class="quiz-result">
+        <div class="main__wrapper quiz-result__wrapper">
+          <div class="quiz-result__personal-info">
+            <span id="quiz-username" class="b4 quiz-result__username"
+              >Константин Константинопольский</span
+            >
+            <span id="quiz-done-date" class="b4 quiz-result__test-date">20.01.2020</span>
+          </div>
+          <div class="quiz-result__results">
+            <div class="result-box quiz-result__result-box">
+              <span class="b4 result-box__label"
+                >Результаты <span id="result-try-num" class="b4 result-box__label">1</span>-й
+                попытки</span
+              >
+              <div class="result-box__results">
+                <span class="result-box__result">
+                  <span id="points" class="result-box__result">6</span class="result-box__result">/<span id="max-points" class="result-box__result">10</span>
+                </span>
+                <span id="result-in-precent" class="result-box__result">
+                  60%
+                </span>
+              </div>
+            </div>
+            <div
+              id="best-result-container"
+              class="result-box quiz-result__result-box"
+            >
+              <span class="b4 result-box__label">Лучший результат</span>
+              <div class="result-box__results">
+                <span
+                  id="best-result-precent"
+                  class="result-box__result result-box__result--grey"
+                >
+                  60%
+                </span>
+              </div>
+            </div>
+          </div>
+          <span id="result-comment" class="b2 quiz-result__comment"
+            >Не очень хороший результат, рекомендуем изучить курс еще раз.</span
+          >
+          <button
+            id="repeat-test-button"
+            class="button button--next-step quiz-result__repeat-test-button"
+          >
+            Повторить тест
+          </button>
+        </div>
+      </section>
+
+      <div class="decoration-line main__bottom-decoration-line-container">
+        <div
+          class="decoration-line__top-border decoration-line__lines-container main__bottom-decoration-lines"
+        >
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--left"
+            ></div>
+          </div>
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

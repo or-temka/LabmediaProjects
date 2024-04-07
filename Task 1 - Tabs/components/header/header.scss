@@ -1,0 +1,31 @@
+@import '../decoration-line/decoration-line';
+
+.header {
+  width: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 28px;
+    padding: 15px 30px 17px 30px;
+  }
+
+  &__menu-button {
+    width: 32px;
+    height: 32px;
+    background-image: url('/source/svg/menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__label {
+    @include b4;
+  }
+}

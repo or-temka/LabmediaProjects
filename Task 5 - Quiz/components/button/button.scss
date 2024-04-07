@@ -1,0 +1,27 @@
+.button {
+  border: 1px solid var(--element-color);
+  background-color: var(--background-color);
+  transition: 0.2s border;
+  cursor: pointer;
+  user-select: none;
+
+  &--next-step {
+    @include b3;
+    padding: 17px 45px;
+    border-radius: 8px;
+
+    &:hover {
+      border: 1px solid var(--main-color);
+    }
+  }
+
+  &--disabled {
+    background-color: var(--element-border-color);
+    cursor: initial;
+
+    &:hover {
+      border: 1px solid var(--element-color);
+      background-color: var(--element-border-color);
+    }
+  }
+}

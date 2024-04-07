@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="source/fonts/Golos/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="source/fonts/Navigo/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="source/fonts/Century Gothic/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Task</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__menu-button"></div>
+        <span class="header__label">Текст</span>
+      </div>
+      <div class="decoration-line">
+        <div
+          class="decoration-line__top-border decoration-line__lines-container"
+        >
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--left"
+            ></div>
+          </div>
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="decoration-line">
+        <div
+          id="progress-line"
+          class="decoration-line__progress-bar decoration-line__lines-container"
+        >
+          <div class="decoration-line__progress-container">
+            <div
+              class="decoration-line__progress-line decoration-line__progress-line--left decoration-line__line decoration-line__line--left"
+            ></div>
+            <div
+              class="decoration-line__progress-line decoration-line__progress-line--right decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <section class="main__slider-wrapper">
+        <h2 class="main__title h4">Слайдер</h2>
+        <div class="slider">
+          <!-- slides of slider -->
+          <div class="slider__slides">
+            <div id="slides-container" class="slider__slides-wrapper">
+              <div data-slide-num="1" class="slider__slide">
+                <div class="some-content-in-slide">
+                  <img
+                    src="source/img/slide1i1.jpg"
+                    alt="slide img"
+                    class="some-content-in-slide__img"
+                  />
+                  <h4 class="h4 some-content-in-slide__label">Текст 1</h4>
+                </div>
+              </div>
+              <div data-slide-num="2" class="slider__slide">
+                <div class="some-content-in-slide">
+                  <img
+                    src="source/img/slide2i1.jpg"
+                    alt="slide img"
+                    class="some-content-in-slide__img"
+                  />
+                  <h4 class="h4 some-content-in-slide__label">Текст 2</h4>
+                </div>
+              </div>
+              <div data-slide-num="3" class="slider__slide">
+                <div class="some-content-in-slide">
+                  <img
+                    src="source/img/slide3i1.jpg"
+                    alt="slide img"
+                    class="some-content-in-slide__img"
+                  />
+                  <h4 class="h4 some-content-in-slide__label">Текст 3</h4>
+                </div>
+              </div>
+              <div data-slide-num="4" class="slider__slide">
+                <div class="some-content-in-slide">
+                  <img
+                    src="source/img/slide4i1.jpg"
+                    alt="slide img"
+                    class="some-content-in-slide__img"
+                  />
+                  <h4 class="h4 some-content-in-slide__label">Текст 4</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slider menu -->
+          <div class="slider__nav-menu">
+            <div
+              id="prev-slide-btn"
+              class="slider__change-slide-btn slider__change-slide-btn--prev-slide"
+            ></div>
+            <ul id="slides-btns" class="slider__slides-btns">
+              <li
+                data-slide-num="1"
+                class="slider__slides-btn slider__slides-btn--active"
+              ></li>
+              <li data-slide-num="2" class="slider__slides-btn"></li>
+              <li data-slide-num="3" class="slider__slides-btn"></li>
+              <li data-slide-num="4" class="slider__slides-btn"></li>
+            </ul>
+            <div
+              id="next-slide-btn"
+              class="slider__change-slide-btn slider__change-slide-btn--next-slide"
+            ></div>
+          </div>
+        </div>
+        <button
+          id="next-btn"
+          class="button button--disabled button--next-step main__next-btn"
+        >
+          Продолжить
+        </button>
+      </section>
+      <div class="decoration-line main__bottom-decoration-line-container">
+        <div
+          class="decoration-line__top-border decoration-line__lines-container main__bottom-decoration-lines"
+        >
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--left"
+            ></div>
+          </div>
+          <div class="decoration-line__line-container">
+            <div
+              class="decoration-line__line decoration-line__line--right"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
