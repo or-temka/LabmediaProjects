@@ -1,0 +1,29 @@
+.result-box {
+  background-color: var(--light-grey-background-color);
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  &__label {
+    color: var(--dark-grey-text-color);
+  }
+
+  &__results {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__result {
+    color: var(--main-color);
+    @include h2;
+
+
+    &--grey {
+      color: var(--light-text-color);
+    }
+  }
+}

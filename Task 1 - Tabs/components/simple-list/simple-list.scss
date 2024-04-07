@@ -47,7 +47,7 @@
   &__ul-item {
     margin-left: 2px;
     &::before {
-      content: '-';
+      content: '–';
       @include shy-font-family;
       color: var(--secondary-color);
       display: inline-block;

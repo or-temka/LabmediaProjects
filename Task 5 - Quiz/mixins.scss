@@ -1,0 +1,57 @@
+// font-family
+@mixin general-font-family() {
+  font-family: 'Golos Text', Arial, Helvetica, sans-serif;
+}
+@mixin second-font-family() {
+  font-family: 'Navigo', Arial, Helvetica, sans-serif;
+}
+@mixin shy-font-family() {
+  font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+}
+
+//text
+@mixin h1($line-height: 50px) {
+  font-size: 38px;
+  line-height: $line-height;
+  font-weight: var(--bold-font-weight);
+}
+@mixin h2($line-height: 40px) {
+  font-size: 30px;
+  line-height: $line-height;
+  font-weight: var(--bold-font-weight);
+}
+@mixin h4($line-height: 26px) {
+  font-size: var(--text-size-big);
+  line-height: $line-height;
+  font-weight: var(--bold-font-weight);
+}
+@mixin h5($line-height: 24px) {
+  font-size: var(--text-size-medium);
+  line-height: $line-height;
+  font-weight: var(--bold-font-weight);
+}
+@mixin b2($line-height: 26px) {
+  font-size: var(--text-size-big);
+  line-height: $line-height;
+  font-weight: var(--standart-font-weight);
+}
+@mixin b3($line-height: 24px) {
+  font-size: var(--text-size-medium);
+  line-height: $line-height;
+  font-weight: var(--standart-font-weight);
+}
+@mixin b4($line-height: 20px) {
+  font-size: var(--text-size);
+  line-height: $line-height;
+  font-weight: var(--standart-font-weight);
+}
+@mixin b5($line-height: 21px) {
+  font-size: var(--text-size);
+  line-height: $line-height;
+  font-weight: var(--standart-font-weight);
+}
+
+//shadows
+@mixin small-shadow() {
+  box-shadow: 0px 1px 3px var(--element-border-color);
+}
